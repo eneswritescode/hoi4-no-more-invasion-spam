@@ -1,0 +1,25 @@
+# ==============================================================================
+# No More Invasion Spam: Minor Nations Invasion Restriction
+# Minor nations (is_major = no) are restricted from launching naval invasions.
+# Unless they become a major power, they will refrain from launching amphibious attacks.
+# ==============================================================================
+
+minor_nation_suppress_invasion_spam = {
+	enable = {
+		is_major = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		value = -100
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		value = -100
+	}
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = -100
+	}
+}
